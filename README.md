@@ -1,34 +1,42 @@
-Creating a VPC with Public and Private Subnets using AWS CLI
+**Creating a VPC with Public and Private Subnets using AWS CLI**
 
-DESCRIPTION:This script creates an Amazon Virtual Private Cloud (VPC) with two subnets (one public and one private) and links an Internet Gateway to the public subnet. Additionally, it associates a route table with the private subnet to enable communication within the VPC.
 
-Prerequisites
 
-    1.AWS CLI installed and configured with the necessary IAM permissions.
-    2.A basic understanding of AWS networking concepts like VPCs, subnets, and route tables.
+**DESCRIPTION:** This script creates an Amazon Virtual Private Cloud (VPC) with two subnets (one public and one private) and links an Internet Gateway to the public subnet. Additionally, it associates a route table with the private subnet to enable communication within the VPC.
 
-Usage
 
-    1.Open a terminal and navigate to the directory containing the script.
+**Prerequisites**
 
-    2.Make the script executable:
-	-chmod +x create_vpc.sh
+1.AWS CLI installed and configured with the necessary IAM permissions.
 
-    3.Run the script:
-	-./create_vpc.sh
+2.A basic understanding of AWS networking concepts like VPCs, subnets, and route tables.
 
-    4.The script will create the following resources:
+
+**Usage**
+
+1.Open a terminal and navigate to the directory containing the script.
+
+2.Make the script executable:
+
+	- chmod +x create_vpc.sh
+
+3.Run the script:
+
+	- ./create_vpc.sh
+
+4.The script will create the following resources:
         * VPC
         * Internet Gateway
         * Public Subnet
         * Private Subnet
         * Route Table (associated with the private subnet)
 
-    5.After execution, the script will display the VPC ID, Public Subnet ID, and Private Subnet ID.
+5.After execution, the script will display the VPC ID, Public Subnet ID, and Private Subnet ID.
 
-    6.Customize the script as needed by modifying the CIDR blocks, availability zones, or other parameters to match your requirements.
+ 6.Customize the script as needed by modifying the CIDR blocks, availability zones, or other parameters to match your requirements.
 
-Script Explanation
+
+**Script Explanation**
 
 The script does the following:
 
@@ -48,20 +56,25 @@ The script does the following:
 
     8.Associates the private subnet with the route table.
 
-Customization
+
+**Customization**
 
 You can customize the script by changing the following variables:
 
-    vpc_cidr: The CIDR block for the VPC.
-    public_subnet_cidr: The CIDR block for the public subnet.
-    private_subnet_cidr: The CIDR block for the private subnet.
+1. vpc_cidr☑️ The CIDR block for the VPC.
+ 
+2. public_subnet_cidr☑️ The CIDR block for the public subnet.
+ 
+3. private_subnet_cidr☑️ The CIDR block for the private subnet.
 
-You can also adjust the availability zones and other parameters to match your specific requirements.
-Note
+_You can also adjust the availability zones and other parameters to match your specific requirements._
 
-    Ensure that you have configured the AWS CLI with the appropriate IAM permissions to create VPC resources.
 
-    This script creates a basic VPC setup. For more complex configurations, consider using AWS CloudFormation or Terraform.
+**Note**
 
-    Be cautious when running scripts that create AWS resources to avoid unintended charges.
+🥇Ensure that you have configured the AWS CLI with the appropriate IAM permissions to create VPC resources.
+
+🥈This script creates a basic VPC setup. For more complex configurations, consider using AWS CloudFormation or Terraform.
+
+🥉Be cautious when running scripts that create AWS resources to avoid unintended charges.
 
